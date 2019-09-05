@@ -1,0 +1,4964 @@
+Carta una;
+Texto let;
+Player ply;
+ 
+class flujoPantallas{
+ int estado; 
+  int a;
+  int b;
+
+  
+  flujoPantallas(){
+    this.estado = 0;
+    this.a= 600;
+    this.b= 300;
+  }
+  
+  void display(){
+    switch(this.estado){
+    case 0:
+      background(250,150,160);
+      let.Tcaso1();
+      
+    break;
+    case 1:
+      background(0,190,250);
+      let.Tcaso2();
+    
+     
+    break;
+    case 2:
+      background(250,150,160);   
+una.raton();
+una.cerdo();
+una.pollo();
+una.oso();
+una.leon();
+una.pez();
+una.hamster();
+una.conejo();
+una.panda();
+una.rana();
+una.perro();
+una.vaca();
+una.oruga();
+una.mariposa();
+una.raton_();
+una.cerdo_();
+una.pollo_();
+una.oso_();
+una.leon_();
+una.pez_();
+una.hamster_();
+una.conejo_();
+una.panda_();
+una.rana_();
+una.perro_();
+una.vaca_();
+una.oruga_();
+una.mariposa_();
+ una.keyPressed();
+ let.Tcaso3();
+ply.jugador1();
+ply.jugador2();
+cambio();
+lugar();
+una.turno();
+key();
+   break;
+    case 3:
+      background(250,150,160);
+     let.Tcaso4();
+   
+    break;
+  }
+  }
+ 
+
+ void boton() {
+  fill(0,255,0);
+  stroke(255);
+  rect(this.a,this.b,45,45);
+}
+
+  void cambioPantalla(){
+    estado++;
+  if(estado>3){
+    estado = 0;
+  }
+  }
+}
+  
+  
+
+int t;
+
+flujoPantallas uno;
+
+void setup(){
+ 
+  size(700,700);
+  uno = new flujoPantallas();
+ una = new Carta();
+ let = new Texto();
+ t = round(random(4));
+ ply = new Player();
+
+}
+
+void draw(){
+  uno.display();
+  
+}
+ 
+ void keyPressed() {
+  if (key == CODED) {
+    if (keyCode == CONTROL){
+     uno.cambioPantalla();
+    }
+ }
+ }
+ 
+ int[] cualCartaEs = new int [28] ;
+
+class Carta{
+  boolean[] deFrente = new boolean[28];
+  
+ 
+  void raton() { 
+    cualCartaEs[0] =1;
+    switch(t){
+      case 0:
+       pushMatrix();
+    translate(0,0);
+    if(deFrente[0] == true){
+ 
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(50,90,60,60);
+ellipse(23,60,40,40);
+ellipse(78,60,40,40);
+
+}else {
+   stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("1",30,90);
+}
+popMatrix();
+break;
+case 1:
+       pushMatrix();
+    translate(0,150);
+    if(deFrente[0] == true){
+ 
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(50,90,60,60);
+ellipse(23,60,40,40);
+ellipse(78,60,40,40);
+
+}else {
+   stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("1",30,90);
+}
+popMatrix();
+break;
+case 2:
+       pushMatrix();
+    translate(300,150);
+if(deFrente[0] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(50,90,60,60);
+ellipse(23,60,40,40);
+ellipse(78,60,40,40);
+
+}else {
+   stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("1",30,90);
+}
+popMatrix();
+break;
+case 3:
+     pushMatrix();
+    translate(500,450);
+if(deFrente[0] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(50,90,60,60);
+ellipse(23,60,40,40);
+ellipse(78,60,40,40);
+
+}else {
+   stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("1",30,90);
+}
+popMatrix();
+break;
+case 4:
+    pushMatrix();
+    translate(100,0);
+if(deFrente[0] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(50,90,60,60);
+ellipse(23,60,40,40);
+ellipse(78,60,40,40);
+
+}else {
+   stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("1",30,90);
+}
+popMatrix();
+break;
+
+}
+  }
+
+  
+
+  void cerdo(){
+     cualCartaEs[1] =1;
+    switch(t){
+      case 0:
+       pushMatrix();
+    translate(100,0);
+    if(deFrente[1] == true){
+  
+  stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,160);
+ellipse(50,90,60,60);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,100,160);
+ellipse(50,95,40,30);
+fill(250,150,160);
+ellipse(60,95,5,20);
+ellipse(40,95,5,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("2",30,90);
+}
+popMatrix();
+break;
+     case 1:
+       pushMatrix();
+    translate(300,300);
+    if(deFrente[1] == true){
+  
+  stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,160);
+ellipse(50,90,60,60);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,100,160);
+ellipse(50,95,40,30);
+fill(250,150,160);
+ellipse(60,95,5,20);
+ellipse(40,95,5,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("2",30,90);
+}
+popMatrix();
+break;
+    case 2:
+       pushMatrix();
+    translate(0,0);
+    if(deFrente[1] == true){
+  
+  stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,160);
+ellipse(50,90,60,60);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,100,160);
+ellipse(50,95,40,30);
+fill(250,150,160);
+ellipse(60,95,5,20);
+ellipse(40,95,5,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("2",30,90);
+}
+popMatrix();
+break;
+ case 3:
+       pushMatrix();
+    translate(200,450);
+    if(deFrente[1] == true){
+  
+  stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,160);
+ellipse(50,90,60,60);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,100,160);
+ellipse(50,95,40,30);
+fill(250,150,160);
+ellipse(60,95,5,20);
+ellipse(40,95,5,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("2",30,90);
+}
+popMatrix();
+break;
+ case 4:
+       pushMatrix();
+    translate(200,150);
+    if(deFrente[1] == true){
+  
+  stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,160);
+ellipse(50,90,60,60);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,100,160);
+ellipse(50,95,40,30);
+fill(250,150,160);
+ellipse(60,95,5,20);
+ellipse(40,95,5,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("2",30,90);
+}
+popMatrix();
+break;
+ }
+  }
+  
+  void pollo(){
+     cualCartaEs[2] =2;
+    switch(t){
+      case 0:
+       pushMatrix();
+    translate(200,0);
+  if(deFrente[2] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255,0,0);
+ellipse(40,60,10,40);
+ellipse(50,60,10,40);
+ellipse(30,60,10,40);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(240,230,90);
+ellipse(50,105,20,40);
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Q",30,90);
+ }
+ popMatrix();
+ break;
+     case 1:
+       pushMatrix();
+    translate(500,150);
+  if(deFrente[2] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255,0,0);
+ellipse(40,60,10,40);
+ellipse(50,60,10,40);
+ellipse(30,60,10,40);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(240,230,90);
+ellipse(50,105,20,40);
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Q",30,90);
+ }
+ popMatrix();
+ break;
+ case 2:
+       pushMatrix();
+    translate(200,300);
+  if(deFrente[2] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255,0,0);
+ellipse(40,60,10,40);
+ellipse(50,60,10,40);
+ellipse(30,60,10,40);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(240,230,90);
+ellipse(50,105,20,40);
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Q",30,90);
+ }
+ popMatrix();
+ break;
+  case 3:
+       pushMatrix();
+    translate(300,150);
+  if(deFrente[2] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255,0,0);
+ellipse(40,60,10,40);
+ellipse(50,60,10,40);
+ellipse(30,60,10,40);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(240,230,90);
+ellipse(50,105,20,40);
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Q",30,90);
+ }
+ popMatrix();
+ break;
+  case 4:
+       pushMatrix();
+    translate(600,450);
+  if(deFrente[2] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255,0,0);
+ellipse(40,60,10,40);
+ellipse(50,60,10,40);
+ellipse(30,60,10,40);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(240,230,90);
+ellipse(50,105,20,40);
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Q",30,90);
+ }
+ popMatrix();
+ break;
+}
+  }
+
+void oso(){
+   cualCartaEs[3] =3;
+    switch(t){
+      case 0:
+   pushMatrix();
+    translate(300,0);
+if(deFrente[3] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,50,50);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(150,90,50);
+ellipse(50,95,40,40);
+fill(0,0,0);
+ellipse(50,90,20,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("W",30,90);
+}
+popMatrix();
+break;
+      case 1:
+   pushMatrix();
+    translate(100,450);
+if(deFrente[3] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,50,50);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(150,90,50);
+ellipse(50,95,40,40);
+fill(0,0,0);
+ellipse(50,90,20,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("W",30,90);
+}
+popMatrix();
+break;
+    case 2:
+   pushMatrix();
+    translate(500,0);
+if(deFrente[3] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,50,50);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(150,90,50);
+ellipse(50,95,40,40);
+fill(0,0,0);
+ellipse(50,90,20,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("W",30,90);
+}
+popMatrix();
+break;
+    case 3:
+   pushMatrix();
+    translate(0,450);
+if(deFrente[3] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,50,50);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(150,90,50);
+ellipse(50,95,40,40);
+fill(0,0,0);
+ellipse(50,90,20,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("W",30,90);
+}
+popMatrix();
+break;
+    case 4:
+   pushMatrix();
+    translate(400,0);
+if(deFrente[3] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,50,50);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(150,90,50);
+ellipse(50,95,40,40);
+fill(0,0,0);
+ellipse(50,90,20,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("W",30,90);
+}
+popMatrix();
+break;
+}
+ }
+  
+void leon(){
+   cualCartaEs[4] =4;
+    switch(t){
+      case 0:
+    pushMatrix();
+    translate(400,0);
+  if(deFrente[4] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,80);
+ellipse(29,50,20,20);
+ellipse(70,50,20,20);
+fill(255,100,70);
+ellipse(50,85,85,85);
+fill(250,150,80);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,190,80);
+ellipse(50,95,30,30);
+fill(0,0,0);
+ellipse(50,90,10,5);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("E",30,90);
+}
+popMatrix();
+break;
+      case 1:
+    pushMatrix();
+    translate(500,450);
+  if(deFrente[4] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,80);
+ellipse(29,50,20,20);
+ellipse(70,50,20,20);
+fill(255,100,70);
+ellipse(50,85,85,85);
+fill(250,150,80);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,190,80);
+ellipse(50,95,30,30);
+fill(0,0,0);
+ellipse(50,90,10,5);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("E",30,90);
+}
+popMatrix();
+break;
+ case 2:
+    pushMatrix();
+    translate(0,150);
+  if(deFrente[4] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,80);
+ellipse(29,50,20,20);
+ellipse(70,50,20,20);
+fill(255,100,70);
+ellipse(50,85,85,85);
+fill(250,150,80);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,190,80);
+ellipse(50,95,30,30);
+fill(0,0,0);
+ellipse(50,90,10,5);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("E",30,90);
+}
+popMatrix();
+break;
+case 3:
+    pushMatrix();
+    translate(600,300);
+  if(deFrente[4] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,80);
+ellipse(29,50,20,20);
+ellipse(70,50,20,20);
+fill(255,100,70);
+ellipse(50,85,85,85);
+fill(250,150,80);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,190,80);
+ellipse(50,95,30,30);
+fill(0,0,0);
+ellipse(50,90,10,5);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("E",30,90);
+}
+popMatrix();
+break;
+case 4:
+    pushMatrix();
+    translate(300,300);
+  if(deFrente[4] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,80);
+ellipse(29,50,20,20);
+ellipse(70,50,20,20);
+fill(255,100,70);
+ellipse(50,85,85,85);
+fill(250,150,80);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,190,80);
+ellipse(50,95,30,30);
+fill(0,0,0);
+ellipse(50,90,10,5);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("E",30,90);
+}
+popMatrix();
+break;
+}
+}
+
+void pez(){
+    cualCartaEs[5] =5;
+    switch(t){
+      case 0:
+   pushMatrix();
+    translate(500,0);
+ if(deFrente[5] == true){
+
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,70,255);
+ellipse(29,110,20,30);
+ellipse(70,110,20,30);
+ellipse(50,90,60,60);
+fill(255);
+ellipse(70,76,20,20);
+ellipse(30,76,20,20);
+fill(0,0,0);
+ellipse(70,76,10,10);
+ellipse(30,76,10,10);
+fill(0,90,255);
+ellipse(50,100,30,40);
+fill(0,0,0);
+ellipse(50,100,20,30);
+
+ }else {
+stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("R",30,90);
+}
+popMatrix();
+break;
+case 1:
+   pushMatrix();
+    translate(100,0);
+ if(deFrente[5] == true){
+
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,70,255);
+ellipse(29,110,20,30);
+ellipse(70,110,20,30);
+ellipse(50,90,60,60);
+fill(255);
+ellipse(70,76,20,20);
+ellipse(30,76,20,20);
+fill(0,0,0);
+ellipse(70,76,10,10);
+ellipse(30,76,10,10);
+fill(0,90,255);
+ellipse(50,100,30,40);
+fill(0,0,0);
+ellipse(50,100,20,30);
+
+ }else {
+stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("R",30,90);
+}
+popMatrix();
+break;
+case 2:
+   pushMatrix();
+    translate(100,300);
+ if(deFrente[5] == true){
+
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,70,255);
+ellipse(29,110,20,30);
+ellipse(70,110,20,30);
+ellipse(50,90,60,60);
+fill(255);
+ellipse(70,76,20,20);
+ellipse(30,76,20,20);
+fill(0,0,0);
+ellipse(70,76,10,10);
+ellipse(30,76,10,10);
+fill(0,90,255);
+ellipse(50,100,30,40);
+fill(0,0,0);
+ellipse(50,100,20,30);
+
+ }else {
+stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("R",30,90);
+}
+popMatrix();
+break;
+case 3:
+   pushMatrix();
+    translate(100,300);
+ if(deFrente[5] == true){
+
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,70,255);
+ellipse(29,110,20,30);
+ellipse(70,110,20,30);
+ellipse(50,90,60,60);
+fill(255);
+ellipse(70,76,20,20);
+ellipse(30,76,20,20);
+fill(0,0,0);
+ellipse(70,76,10,10);
+ellipse(30,76,10,10);
+fill(0,90,255);
+ellipse(50,100,30,40);
+fill(0,0,0);
+ellipse(50,100,20,30);
+
+ }else {
+stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("R",30,90);
+}
+popMatrix();
+break;
+case 4:
+   pushMatrix();
+    translate(0,450);
+ if(deFrente[5] == true){
+
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,70,255);
+ellipse(29,110,20,30);
+ellipse(70,110,20,30);
+ellipse(50,90,60,60);
+fill(255);
+ellipse(70,76,20,20);
+ellipse(30,76,20,20);
+fill(0,0,0);
+ellipse(70,76,10,10);
+ellipse(30,76,10,10);
+fill(0,90,255);
+ellipse(50,100,30,40);
+fill(0,0,0);
+ellipse(50,100,20,30);
+
+ }else {
+stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("R",30,90);
+}
+popMatrix();
+break;
+}
+}
+
+void hamster(){
+   switch(t){
+      case 0:
+   pushMatrix();
+    translate(600,0);
+ if(deFrente[6] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,120,40);
+ellipse(29,63,10,10);
+ellipse(70,63,10,10);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(0,0,0);
+ellipse(50,90,8,8);
+
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("T",30,90);
+}
+popMatrix();
+break;
+case 1:
+pushMatrix();
+    translate(600,300);
+ if(deFrente[6] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,120,40);
+ellipse(29,63,10,10);
+ellipse(70,63,10,10);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(0,0,0);
+ellipse(50,90,8,8);
+
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("T",30,90);
+}
+popMatrix();
+break;
+case 2:
+pushMatrix();
+    translate(400,300);
+ if(deFrente[6] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,120,40);
+ellipse(29,63,10,10);
+ellipse(70,63,10,10);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(0,0,0);
+ellipse(50,90,8,8);
+
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("T",30,90);
+}
+popMatrix();
+break;
+case 3:
+pushMatrix();
+    translate(100,0);
+ if(deFrente[6] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,120,40);
+ellipse(29,63,10,10);
+ellipse(70,63,10,10);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(0,0,0);
+ellipse(50,90,8,8);
+
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("T",30,90);
+}
+popMatrix();
+break;
+case 4:
+pushMatrix();
+    translate(0,300);
+ if(deFrente[6] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,120,40);
+ellipse(29,63,10,10);
+ellipse(70,63,10,10);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(0,0,0);
+ellipse(50,90,8,8);
+
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("T",30,90);
+}
+popMatrix();
+break;
+}
+}
+
+
+void conejo(){
+   switch(t){
+      case 0:
+   pushMatrix();
+    translate(0,150);
+   if(deFrente[7] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250);
+ellipse(35,50,20,50);
+ellipse(65,50,20,50);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(200,50,0);
+ellipse(50,90,8,8);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Y",30,90);
+}
+popMatrix();
+break;
+case 1:
+ pushMatrix();
+    translate(300,150);
+   if(deFrente[7] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250);
+ellipse(35,50,20,50);
+ellipse(65,50,20,50);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(200,50,0);
+ellipse(50,90,8,8);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Y",30,90);
+}
+popMatrix();
+break;
+case 2:
+ pushMatrix();
+    translate(600,450);
+   if(deFrente[7] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250);
+ellipse(35,50,20,50);
+ellipse(65,50,20,50);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(200,50,0);
+ellipse(50,90,8,8);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Y",30,90);
+}
+popMatrix();
+break;
+case 3:
+ pushMatrix();
+    translate(400,0);
+   if(deFrente[7] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250);
+ellipse(35,50,20,50);
+ellipse(65,50,20,50);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(200,50,0);
+ellipse(50,90,8,8);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Y",30,90);
+}
+popMatrix();
+break;
+case 4:
+ pushMatrix();
+    translate(500,150);
+   if(deFrente[7] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250);
+ellipse(35,50,20,50);
+ellipse(65,50,20,50);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(200,50,0);
+ellipse(50,90,8,8);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Y",30,90);
+}
+popMatrix();
+break;
+   }
+}
+
+void panda(){
+   switch(t){
+      case 0:
+   pushMatrix();
+    translate(100,150);
+ if(deFrente[8] == true){
+  
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,20,20);
+ellipse(35,76,20,20);
+fill(255);
+ellipse(63,76,10,10);
+ellipse(35,76,10,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(50,95,20,20);
+fill(0,0,0);
+ellipse(50,90,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("U",30,90);
+}
+popMatrix();
+break;
+ case 1:
+   pushMatrix();
+    translate(500,0);
+ if(deFrente[8] == true){
+  
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,20,20);
+ellipse(35,76,20,20);
+fill(255);
+ellipse(63,76,10,10);
+ellipse(35,76,10,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(50,95,20,20);
+fill(0,0,0);
+ellipse(50,90,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("U",30,90);
+}
+popMatrix();
+break;
+ case 2:
+   pushMatrix();
+    translate(300,450);
+ if(deFrente[8] == true){
+  
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,20,20);
+ellipse(35,76,20,20);
+fill(255);
+ellipse(63,76,10,10);
+ellipse(35,76,10,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(50,95,20,20);
+fill(0,0,0);
+ellipse(50,90,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("U",30,90);
+}
+popMatrix();
+break;
+ case 3:
+   pushMatrix();
+    translate(0,0);
+ if(deFrente[8] == true){
+  
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,20,20);
+ellipse(35,76,20,20);
+fill(255);
+ellipse(63,76,10,10);
+ellipse(35,76,10,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(50,95,20,20);
+fill(0,0,0);
+ellipse(50,90,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("U",30,90);
+}
+popMatrix();
+break;
+case 4:
+   pushMatrix();
+    translate(200,450);
+ if(deFrente[8] == true){
+  
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,20,20);
+ellipse(35,76,20,20);
+fill(255);
+ellipse(63,76,10,10);
+ellipse(35,76,10,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(50,95,20,20);
+fill(0,0,0);
+ellipse(50,90,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("U",30,90);
+}
+popMatrix();
+break;
+   }
+}
+
+void rana(){
+   switch(t){
+      case 0:
+   pushMatrix();
+    translate(200,150);
+     if(deFrente[9] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,90,80,60);
+fill(0,255,0);
+ellipse(50,85,80,50);
+fill(255);
+ellipse(29,60,30,30);
+ellipse(70,60,30,30);
+fill(0,0,0);
+ellipse(29,60,10,10);
+ellipse(70,60,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("I",30,90);
+}
+popMatrix();
+break;
+ case 1:
+   pushMatrix();
+    translate(100,300);
+     if(deFrente[9] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,90,80,60);
+fill(0,255,0);
+ellipse(50,85,80,50);
+fill(255);
+ellipse(29,60,30,30);
+ellipse(70,60,30,30);
+fill(0,0,0);
+ellipse(29,60,10,10);
+ellipse(70,60,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("I",30,90);
+}
+popMatrix();
+break;
+case 2:
+   pushMatrix();
+    translate(0,450);
+     if(deFrente[9] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,90,80,60);
+fill(0,255,0);
+ellipse(50,85,80,50);
+fill(255);
+ellipse(29,60,30,30);
+ellipse(70,60,30,30);
+fill(0,0,0);
+ellipse(29,60,10,10);
+ellipse(70,60,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("I",30,90);
+}
+popMatrix();
+break;
+case 3:
+   pushMatrix();
+    translate(400,300);
+     if(deFrente[9] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,90,80,60);
+fill(0,255,0);
+ellipse(50,85,80,50);
+fill(255);
+ellipse(29,60,30,30);
+ellipse(70,60,30,30);
+fill(0,0,0);
+ellipse(29,60,10,10);
+ellipse(70,60,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("I",30,90);
+}
+popMatrix();
+break;
+case 4:
+   pushMatrix();
+    translate(0,0);
+     if(deFrente[9] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,90,80,60);
+fill(0,255,0);
+ellipse(50,85,80,50);
+fill(255);
+ellipse(29,60,30,30);
+ellipse(70,60,30,30);
+fill(0,0,0);
+ellipse(29,60,10,10);
+ellipse(70,60,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("I",30,90);
+}
+popMatrix();
+break;
+   }
+}
+
+void perro(){
+  switch(t){
+      case 0:
+   pushMatrix();
+    translate(300,150);
+    if(deFrente[10] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(200,0,0);
+ellipse(50,115,10,30);
+fill(240,150,70);
+ellipse(50,90,60,60);
+fill(150,50,50);
+ellipse(25,90,20,50);
+ellipse(73,90,20,50);
+fill(150,50,50);
+ellipse(50,98,20,20);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+
+}else{
+
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+ fill(250,200,100);
+textSize(70);
+text("O",30,90);
+}
+popMatrix();
+break;
+case 1:
+   pushMatrix();
+    translate(300,0);
+    if(deFrente[10] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(200,0,0);
+ellipse(50,115,10,30);
+fill(240,150,70);
+ellipse(50,90,60,60);
+fill(150,50,50);
+ellipse(25,90,20,50);
+ellipse(73,90,20,50);
+fill(150,50,50);
+ellipse(50,98,20,20);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+
+}else{
+
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+ fill(250,200,100);
+textSize(70);
+text("O",30,90);
+}
+popMatrix();
+break;
+case 2:
+   pushMatrix();
+    translate(100,450);
+    if(deFrente[10] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(200,0,0);
+ellipse(50,115,10,30);
+fill(240,150,70);
+ellipse(50,90,60,60);
+fill(150,50,50);
+ellipse(25,90,20,50);
+ellipse(73,90,20,50);
+fill(150,50,50);
+ellipse(50,98,20,20);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+
+}else{
+
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+ fill(250,200,100);
+textSize(70);
+text("O",30,90);
+}
+popMatrix();
+break;
+case 3:
+   pushMatrix();
+    translate(500,150);
+    if(deFrente[10] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(200,0,0);
+ellipse(50,115,10,30);
+fill(240,150,70);
+ellipse(50,90,60,60);
+fill(150,50,50);
+ellipse(25,90,20,50);
+ellipse(73,90,20,50);
+fill(150,50,50);
+ellipse(50,98,20,20);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+
+}else{
+
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+ fill(250,200,100);
+textSize(70);
+text("O",30,90);
+}
+popMatrix();
+break;
+case 4:
+   pushMatrix();
+    translate(100,300);
+    if(deFrente[10] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(200,0,0);
+ellipse(50,115,10,30);
+fill(240,150,70);
+ellipse(50,90,60,60);
+fill(150,50,50);
+ellipse(25,90,20,50);
+ellipse(73,90,20,50);
+fill(150,50,50);
+ellipse(50,98,20,20);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+
+}else{
+
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+ fill(250,200,100);
+textSize(70);
+text("O",30,90);
+}
+popMatrix();
+break;
+  }
+}
+
+
+void vaca(){
+  switch(t){
+      case 0:
+   pushMatrix();
+    translate(400,150);
+     if(deFrente[11] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+ellipse(50,85,60,60);
+fill(0,0,0);
+ellipse(60,90,30,20);
+ellipse(50,60,20,10);
+fill(200,150,50);
+ellipse(50,110,60,40);
+fill(0,0,0);
+ellipse(29,75,10,10);
+ellipse(70,75,10,10);
+fill(250,150,160);
+ellipse(65,110,5,20);
+ellipse(35,110,5,20);
+
+}else{
+  
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("P",30,90);
+}
+popMatrix();
+break;
+ case 1:
+   pushMatrix();
+    translate(600,450);
+     if(deFrente[11] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+ellipse(50,85,60,60);
+fill(0,0,0);
+ellipse(60,90,30,20);
+ellipse(50,60,20,10);
+fill(200,150,50);
+ellipse(50,110,60,40);
+fill(0,0,0);
+ellipse(29,75,10,10);
+ellipse(70,75,10,10);
+fill(250,150,160);
+ellipse(65,110,5,20);
+ellipse(35,110,5,20);
+
+}else{
+  
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("P",30,90);
+}
+popMatrix();
+break;
+case 2:
+   pushMatrix();
+    translate(500,150);
+     if(deFrente[11] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+ellipse(50,85,60,60);
+fill(0,0,0);
+ellipse(60,90,30,20);
+ellipse(50,60,20,10);
+fill(200,150,50);
+ellipse(50,110,60,40);
+fill(0,0,0);
+ellipse(29,75,10,10);
+ellipse(70,75,10,10);
+fill(250,150,160);
+ellipse(65,110,5,20);
+ellipse(35,110,5,20);
+
+}else{
+  
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("P",30,90);
+}
+popMatrix();
+break;
+case 3:
+   pushMatrix();
+    translate(200,300);
+     if(deFrente[11] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+ellipse(50,85,60,60);
+fill(0,0,0);
+ellipse(60,90,30,20);
+ellipse(50,60,20,10);
+fill(200,150,50);
+ellipse(50,110,60,40);
+fill(0,0,0);
+ellipse(29,75,10,10);
+ellipse(70,75,10,10);
+fill(250,150,160);
+ellipse(65,110,5,20);
+ellipse(35,110,5,20);
+
+}else{
+  
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("P",30,90);
+}
+popMatrix();
+break;
+case 4:
+   pushMatrix();
+    translate(400,450);
+     if(deFrente[11] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+ellipse(50,85,60,60);
+fill(0,0,0);
+ellipse(60,90,30,20);
+ellipse(50,60,20,10);
+fill(200,150,50);
+ellipse(50,110,60,40);
+fill(0,0,0);
+ellipse(29,75,10,10);
+ellipse(70,75,10,10);
+fill(250,150,160);
+ellipse(65,110,5,20);
+ellipse(35,110,5,20);
+
+}else{
+  
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("P",30,90);
+}
+popMatrix();
+break;
+  }
+}
+
+void oruga(){
+   switch(t){
+      case 0:
+    pushMatrix();
+    translate(500,150);
+     if(deFrente[12] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,85,30,30);
+ellipse(60,98,30,30);
+ellipse(40,70,30,30);
+ellipse(70,105,30,30);
+ellipse(80,105,30,30);
+ellipse(40,45,50,50);
+fill(0,0,0);
+ellipse(30,45,10,10);
+ellipse(55,45,10,10);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("A",30,90);
+}
+popMatrix();
+break;
+case 1:
+    pushMatrix();
+    translate(600,0);
+     if(deFrente[12] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,85,30,30);
+ellipse(60,98,30,30);
+ellipse(40,70,30,30);
+ellipse(70,105,30,30);
+ellipse(80,105,30,30);
+ellipse(40,45,50,50);
+fill(0,0,0);
+ellipse(30,45,10,10);
+ellipse(55,45,10,10);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("A",30,90);
+}
+popMatrix();
+break;
+case 2:
+    pushMatrix();
+    translate(600,0);
+     if(deFrente[12] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,85,30,30);
+ellipse(60,98,30,30);
+ellipse(40,70,30,30);
+ellipse(70,105,30,30);
+ellipse(80,105,30,30);
+ellipse(40,45,50,50);
+fill(0,0,0);
+ellipse(30,45,10,10);
+ellipse(55,45,10,10);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("A",30,90);
+}
+popMatrix();
+break;
+case 3:
+    pushMatrix();
+    translate(200,0);
+     if(deFrente[12] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,85,30,30);
+ellipse(60,98,30,30);
+ellipse(40,70,30,30);
+ellipse(70,105,30,30);
+ellipse(80,105,30,30);
+ellipse(40,45,50,50);
+fill(0,0,0);
+ellipse(30,45,10,10);
+ellipse(55,45,10,10);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("A",30,90);
+}
+popMatrix();
+break;
+case 4:
+    pushMatrix();
+    translate(0,150);
+     if(deFrente[12] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,85,30,30);
+ellipse(60,98,30,30);
+ellipse(40,70,30,30);
+ellipse(70,105,30,30);
+ellipse(80,105,30,30);
+ellipse(40,45,50,50);
+fill(0,0,0);
+ellipse(30,45,10,10);
+ellipse(55,45,10,10);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("A",30,90);
+}
+popMatrix();
+break;
+   }
+}
+
+void mariposa(){
+ switch(t){
+      case 0:
+   pushMatrix();
+    translate(600,150);
+    if(deFrente[13] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,25,120);
+ellipse(75,65,45,60);
+ellipse(75,95,35,50);
+ellipse(25,65,45,60);
+ellipse(25,95,35,50);
+fill(250,25,120);
+ellipse(50,85,15,70);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("S",30,90);
+}
+popMatrix();
+break;
+ case 1:
+   pushMatrix();
+    translate(0,0);
+    if(deFrente[13] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,25,120);
+ellipse(75,65,45,60);
+ellipse(75,95,35,50);
+ellipse(25,65,45,60);
+ellipse(25,95,35,50);
+fill(250,25,120);
+ellipse(50,85,15,70);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("S",30,90);
+}
+popMatrix();
+break;
+case 2:
+   pushMatrix();
+    translate(200,150);
+    if(deFrente[13] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,25,120);
+ellipse(75,65,45,60);
+ellipse(75,95,35,50);
+ellipse(25,65,45,60);
+ellipse(25,95,35,50);
+fill(250,25,120);
+ellipse(50,85,15,70);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("S",30,90);
+}
+popMatrix();
+break;
+case 3:
+   pushMatrix();
+    translate(0,150);
+    if(deFrente[13] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,25,120);
+ellipse(75,65,45,60);
+ellipse(75,95,35,50);
+ellipse(25,65,45,60);
+ellipse(25,95,35,50);
+fill(250,25,120);
+ellipse(50,85,15,70);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("S",30,90);
+}
+popMatrix();
+break;
+case 4:
+   pushMatrix();
+    translate(600,150);
+    if(deFrente[13] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,25,120);
+ellipse(75,65,45,60);
+ellipse(75,95,35,50);
+ellipse(25,65,45,60);
+ellipse(25,95,35,50);
+fill(250,25,120);
+ellipse(50,85,15,70);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("S",30,90);
+}
+popMatrix();
+break;
+ }
+}
+
+  void raton_() { 
+    cualCartaEs[14] =1;
+    switch(t){
+      case 0:
+       pushMatrix();
+    translate(0,300);
+    if(deFrente[14] == true){
+ 
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(50,90,60,60);
+ellipse(23,60,40,40);
+ellipse(78,60,40,40);
+
+}else {
+   stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("D",30,90);
+}
+popMatrix();
+break;
+case 1:
+       pushMatrix();
+    translate(400,150);
+    if(deFrente[14] == true){
+ 
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(50,90,60,60);
+ellipse(23,60,40,40);
+ellipse(78,60,40,40);
+
+}else {
+   stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("D",30,90);
+}
+popMatrix();
+break;
+case 2:
+       pushMatrix();
+    translate(200,0);
+if(deFrente[14] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(50,90,60,60);
+ellipse(23,60,40,40);
+ellipse(78,60,40,40);
+
+}else {
+   stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("D",30,90);
+}
+popMatrix();
+break;
+case 3:
+     pushMatrix();
+    translate(100,150);
+if(deFrente[14] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(50,90,60,60);
+ellipse(23,60,40,40);
+ellipse(78,60,40,40);
+
+}else {
+   stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("D",30,90);
+}
+popMatrix();
+break;
+case 4:
+    pushMatrix();
+    translate(500,450);
+if(deFrente[14] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(50,90,60,60);
+ellipse(23,60,40,40);
+ellipse(78,60,40,40);
+
+}else {
+   stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("D",30,90);
+}
+popMatrix();
+break;
+
+}
+  }
+
+  
+
+  void cerdo_(){
+     cualCartaEs[15] =1;
+    switch(t){
+      case 0:
+       pushMatrix();
+    translate(100,300);
+    if(deFrente[15] == true){
+  
+  stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,160);
+ellipse(50,90,60,60);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,100,160);
+ellipse(50,95,40,30);
+fill(250,150,160);
+ellipse(60,95,5,20);
+ellipse(40,95,5,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("F",30,90);
+}
+popMatrix();
+break;
+     case 1:
+       pushMatrix();
+    translate(0,450);
+    if(deFrente[15] == true){
+  
+  stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,160);
+ellipse(50,90,60,60);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,100,160);
+ellipse(50,95,40,30);
+fill(250,150,160);
+ellipse(60,95,5,20);
+ellipse(40,95,5,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("F",30,90);
+}
+popMatrix();
+break;
+    case 2:
+       pushMatrix();
+    translate(600,300);
+    if(deFrente[15] == true){
+  
+  stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,160);
+ellipse(50,90,60,60);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,100,160);
+ellipse(50,95,40,30);
+fill(250,150,160);
+ellipse(60,95,5,20);
+ellipse(40,95,5,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("F",30,90);
+}
+popMatrix();
+break;
+ case 3:
+       pushMatrix();
+    translate(0,300);
+    if(deFrente[15] == true){
+  
+  stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,160);
+ellipse(50,90,60,60);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,100,160);
+ellipse(50,95,40,30);
+fill(250,150,160);
+ellipse(60,95,5,20);
+ellipse(40,95,5,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("F",30,90);
+}
+popMatrix();
+break;
+ case 4:
+       pushMatrix();
+    translate(300,0);
+    if(deFrente[15] == true){
+  
+  stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,160);
+ellipse(50,90,60,60);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,100,160);
+ellipse(50,95,40,30);
+fill(250,150,160);
+ellipse(60,95,5,20);
+ellipse(40,95,5,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("F",30,90);
+}
+popMatrix();
+break;
+ }
+  }
+  
+  void pollo_(){
+     cualCartaEs[16] =2;
+    switch(t){
+      case 0:
+       pushMatrix();
+    translate(200,300);
+  if(deFrente[16] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255,0,0);
+ellipse(40,60,10,40);
+ellipse(50,60,10,40);
+ellipse(30,60,10,40);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(240,230,90);
+ellipse(50,105,20,40);
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("G",30,90);
+ }
+ popMatrix();
+ break;
+     case 1:
+       pushMatrix();
+    translate(400,450);
+  if(deFrente[16] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255,0,0);
+ellipse(40,60,10,40);
+ellipse(50,60,10,40);
+ellipse(30,60,10,40);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(240,230,90);
+ellipse(50,105,20,40);
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("G",30,90);
+ }
+ popMatrix();
+ break;
+ case 2:
+       pushMatrix();
+    translate(500,300);
+  if(deFrente[16] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255,0,0);
+ellipse(40,60,10,40);
+ellipse(50,60,10,40);
+ellipse(30,60,10,40);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(240,230,90);
+ellipse(50,105,20,40);
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("G",30,90);
+ }
+ popMatrix();
+ break;
+  case 3:
+       pushMatrix();
+    translate(200,150);
+  if(deFrente[16] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255,0,0);
+ellipse(40,60,10,40);
+ellipse(50,60,10,40);
+ellipse(30,60,10,40);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(240,230,90);
+ellipse(50,105,20,40);
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("G",30,90);
+ }
+ popMatrix();
+ break;
+  case 4:
+       pushMatrix();
+    translate(100,150);
+  if(deFrente[16] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255,0,0);
+ellipse(40,60,10,40);
+ellipse(50,60,10,40);
+ellipse(30,60,10,40);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(240,230,90);
+ellipse(50,105,20,40);
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("G",30,90);
+ }
+ popMatrix();
+ break;
+}
+  }
+
+void oso_(){
+   cualCartaEs[17] =3;
+    switch(t){
+      case 0:
+   pushMatrix();
+    translate(300,300);
+if(deFrente[17] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,50,50);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(150,90,50);
+ellipse(50,95,40,40);
+fill(0,0,0);
+ellipse(50,90,20,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("H",30,90);
+}
+popMatrix();
+break;
+      case 1:
+   pushMatrix();
+    translate(200,150);
+if(deFrente[17] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,50,50);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(150,90,50);
+ellipse(50,95,40,40);
+fill(0,0,0);
+ellipse(50,90,20,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("H",30,90);
+}
+popMatrix();
+break;
+    case 2:
+   pushMatrix();
+    translate(100,0);
+if(deFrente[17] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,50,50);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(150,90,50);
+ellipse(50,95,40,40);
+fill(0,0,0);
+ellipse(50,90,20,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("H",30,90);
+}
+popMatrix();
+break;
+    case 3:
+   pushMatrix();
+    translate(300,0);
+if(deFrente[17] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,50,50);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(150,90,50);
+ellipse(50,95,40,40);
+fill(0,0,0);
+ellipse(50,90,20,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("H",30,90);
+}
+popMatrix();
+break;
+    case 4:
+   pushMatrix();
+    translate(200,0);
+if(deFrente[17] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,50,50);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(150,90,50);
+ellipse(50,95,40,40);
+fill(0,0,0);
+ellipse(50,90,20,20);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("H",30,90);
+}
+popMatrix();
+break;
+}
+ }
+  
+void leon_(){
+   cualCartaEs[18] =4;
+    switch(t){
+      case 0:
+    pushMatrix();
+    translate(400,300);
+  if(deFrente[4] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,80);
+ellipse(29,50,20,20);
+ellipse(70,50,20,20);
+fill(255,100,70);
+ellipse(50,85,85,85);
+fill(250,150,80);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,190,80);
+ellipse(50,95,30,30);
+fill(0,0,0);
+ellipse(50,90,10,5);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("J",30,90);
+}
+popMatrix();
+break;
+      case 1:
+    pushMatrix();
+    translate(300,450);
+  if(deFrente[18] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,80);
+ellipse(29,50,20,20);
+ellipse(70,50,20,20);
+fill(255,100,70);
+ellipse(50,85,85,85);
+fill(250,150,80);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,190,80);
+ellipse(50,95,30,30);
+fill(0,0,0);
+ellipse(50,90,10,5);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("J",30,90);
+}
+popMatrix();
+break;
+ case 2:
+    pushMatrix();
+    translate(400,150);
+  if(deFrente[18] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,80);
+ellipse(29,50,20,20);
+ellipse(70,50,20,20);
+fill(255,100,70);
+ellipse(50,85,85,85);
+fill(250,150,80);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,190,80);
+ellipse(50,95,30,30);
+fill(0,0,0);
+ellipse(50,90,10,5);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("J",30,90);
+}
+popMatrix();
+break;
+case 3:
+    pushMatrix();
+    translate(600,450);
+  if(deFrente[18] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,80);
+ellipse(29,50,20,20);
+ellipse(70,50,20,20);
+fill(255,100,70);
+ellipse(50,85,85,85);
+fill(250,150,80);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,190,80);
+ellipse(50,95,30,30);
+fill(0,0,0);
+ellipse(50,90,10,5);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("J",30,90);
+}
+popMatrix();
+break;
+case 4:
+    pushMatrix();
+    translate(600,0);
+  if(deFrente[18] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,150,80);
+ellipse(29,50,20,20);
+ellipse(70,50,20,20);
+fill(255,100,70);
+ellipse(50,85,85,85);
+fill(250,150,80);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(250,190,80);
+ellipse(50,95,30,30);
+fill(0,0,0);
+ellipse(50,90,10,5);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("J",30,90);
+}
+popMatrix();
+break;
+}
+}
+
+void pez_(){
+    cualCartaEs[19] =5;
+    switch(t){
+      case 0:
+   pushMatrix();
+    translate(500,300);
+ if(deFrente[19] == true){
+
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,70,255);
+ellipse(29,110,20,30);
+ellipse(70,110,20,30);
+ellipse(50,90,60,60);
+fill(255);
+ellipse(70,76,20,20);
+ellipse(30,76,20,20);
+fill(0,0,0);
+ellipse(70,76,10,10);
+ellipse(30,76,10,10);
+fill(0,90,255);
+ellipse(50,100,30,40);
+fill(0,0,0);
+ellipse(50,100,20,30);
+
+ }else {
+stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("K",30,90);
+}
+popMatrix();
+break;
+case 1:
+   pushMatrix();
+    translate(600,150);
+ if(deFrente[19] == true){
+
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,70,255);
+ellipse(29,110,20,30);
+ellipse(70,110,20,30);
+ellipse(50,90,60,60);
+fill(255);
+ellipse(70,76,20,20);
+ellipse(30,76,20,20);
+fill(0,0,0);
+ellipse(70,76,10,10);
+ellipse(30,76,10,10);
+fill(0,90,255);
+ellipse(50,100,30,40);
+fill(0,0,0);
+ellipse(50,100,20,30);
+
+ }else {
+stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("K",30,90);
+}
+popMatrix();
+break;
+case 2:
+   pushMatrix();
+    translate(600,150);
+ if(deFrente[19] == true){
+
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,70,255);
+ellipse(29,110,20,30);
+ellipse(70,110,20,30);
+ellipse(50,90,60,60);
+fill(255);
+ellipse(70,76,20,20);
+ellipse(30,76,20,20);
+fill(0,0,0);
+ellipse(70,76,10,10);
+ellipse(30,76,10,10);
+fill(0,90,255);
+ellipse(50,100,30,40);
+fill(0,0,0);
+ellipse(50,100,20,30);
+
+ }else {
+stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("K",30,90);
+}
+popMatrix();
+break;
+case 3:
+   pushMatrix();
+    translate(600,0);
+ if(deFrente[19] == true){
+
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,70,255);
+ellipse(29,110,20,30);
+ellipse(70,110,20,30);
+ellipse(50,90,60,60);
+fill(255);
+ellipse(70,76,20,20);
+ellipse(30,76,20,20);
+fill(0,0,0);
+ellipse(70,76,10,10);
+ellipse(30,76,10,10);
+fill(0,90,255);
+ellipse(50,100,30,40);
+fill(0,0,0);
+ellipse(50,100,20,30);
+
+ }else {
+stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("K",30,90);
+}
+popMatrix();
+break;
+case 4:
+   pushMatrix();
+    translate(200,300);
+ if(deFrente[19] == true){
+
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,70,255);
+ellipse(29,110,20,30);
+ellipse(70,110,20,30);
+ellipse(50,90,60,60);
+fill(255);
+ellipse(70,76,20,20);
+ellipse(30,76,20,20);
+fill(0,0,0);
+ellipse(70,76,10,10);
+ellipse(30,76,10,10);
+fill(0,90,255);
+ellipse(50,100,30,40);
+fill(0,0,0);
+ellipse(50,100,20,30);
+
+ }else {
+stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("K",30,90);
+}
+popMatrix();
+break;
+}
+}
+
+void hamster_(){
+   switch(t){
+      case 0:
+   pushMatrix();
+    translate(600,300);
+ if(deFrente[20] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,120,40);
+ellipse(29,63,10,10);
+ellipse(70,63,10,10);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(0,0,0);
+ellipse(50,90,8,8);
+
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("L",30,90);
+}
+popMatrix();
+break;
+case 1:
+pushMatrix();
+    translate(100,150);
+ if(deFrente[20] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,120,40);
+ellipse(29,63,10,10);
+ellipse(70,63,10,10);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(0,0,0);
+ellipse(50,90,8,8);
+
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("L",30,90);
+}
+popMatrix();
+break;
+case 2:
+pushMatrix();
+    translate(300,0);
+ if(deFrente[20] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,120,40);
+ellipse(29,63,10,10);
+ellipse(70,63,10,10);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(0,0,0);
+ellipse(50,90,8,8);
+
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("L",30,90);
+}
+popMatrix();
+break;
+case 3:
+pushMatrix();
+    translate(500,0);
+ if(deFrente[20] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,120,40);
+ellipse(29,63,10,10);
+ellipse(70,63,10,10);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(0,0,0);
+ellipse(50,90,8,8);
+
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("L",30,90);
+}
+popMatrix();
+break;
+case 4:
+pushMatrix();
+    translate(100,450);
+ if(deFrente[20] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250,120,40);
+ellipse(29,63,10,10);
+ellipse(70,63,10,10);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(0,0,0);
+ellipse(50,90,8,8);
+
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("L",30,90);
+}
+popMatrix();
+break;
+}
+}
+
+
+void conejo_(){
+   switch(t){
+      case 0:
+   pushMatrix();
+    translate(0,450);
+   if(deFrente[21] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250);
+ellipse(35,50,20,50);
+ellipse(65,50,20,50);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(200,50,0);
+ellipse(50,90,8,8);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Z",30,90);
+}
+popMatrix();
+break;
+case 1:
+ pushMatrix();
+    translate(200,0);
+   if(deFrente[21] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250);
+ellipse(35,50,20,50);
+ellipse(65,50,20,50);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(200,50,0);
+ellipse(50,90,8,8);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Z",30,90);
+}
+popMatrix();
+break;
+case 2:
+ pushMatrix();
+    translate(0,300);
+   if(deFrente[21] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250);
+ellipse(35,50,20,50);
+ellipse(65,50,20,50);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(200,50,0);
+ellipse(50,90,8,8);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Z",30,90);
+}
+popMatrix();
+break;
+case 3:
+ pushMatrix();
+    translate(300,300);
+   if(deFrente[21] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250);
+ellipse(35,50,20,50);
+ellipse(65,50,20,50);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(200,50,0);
+ellipse(50,90,8,8);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Z",30,90);
+}
+popMatrix();
+break;
+case 4:
+ pushMatrix();
+    translate(300,450);
+   if(deFrente[21] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(250);
+ellipse(35,50,20,50);
+ellipse(65,50,20,50);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(48,95,5,5);
+ellipse(53,95,5,5);
+fill(200,50,0);
+ellipse(50,90,8,8);
+
+ }else {
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+fill(250,200,100);
+textSize(70);
+text("Z",30,90);
+}
+popMatrix();
+break;
+   }
+}
+
+void panda_(){
+   switch(t){
+      case 0:
+   pushMatrix();
+    translate(100,450);
+ if(deFrente[22] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,20,20);
+ellipse(35,76,20,20);
+fill(255);
+ellipse(63,76,10,10);
+ellipse(35,76,10,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(50,95,20,20);
+fill(0,0,0);
+ellipse(50,90,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("X",30,90);
+}
+popMatrix();
+break;
+ case 1:
+   pushMatrix();
+    translate(0,300);
+ if(deFrente[22] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,20,20);
+ellipse(35,76,20,20);
+fill(255);
+ellipse(63,76,10,10);
+ellipse(35,76,10,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(50,95,20,20);
+fill(0,0,0);
+ellipse(50,90,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("X",30,90);
+}
+popMatrix();
+break;
+ case 2:
+   pushMatrix();
+    translate(300,300);
+ if(deFrente[22] == true){
+  
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,20,20);
+ellipse(35,76,20,20);
+fill(255);
+ellipse(63,76,10,10);
+ellipse(35,76,10,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(50,95,20,20);
+fill(0,0,0);
+ellipse(50,90,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("X",30,90);
+}
+popMatrix();
+break;
+ case 3:
+   pushMatrix();
+    translate(100,450);
+ if(deFrente[22] == true){
+  
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,20,20);
+ellipse(35,76,20,20);
+fill(255);
+ellipse(63,76,10,10);
+ellipse(35,76,10,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(50,95,20,20);
+fill(0,0,0);
+ellipse(50,90,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("X",30,90);
+}
+popMatrix();
+break;
+case 4:
+   pushMatrix();
+    translate(500,0);
+ if(deFrente[22] == true){
+  
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,0,0);
+ellipse(29,60,20,20);
+ellipse(70,60,20,20);
+fill(255);
+ellipse(50,90,60,60);
+fill(0,0,0);
+ellipse(63,76,20,20);
+ellipse(35,76,20,20);
+fill(255);
+ellipse(63,76,10,10);
+ellipse(35,76,10,10);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+fill(255);
+ellipse(50,95,20,20);
+fill(0,0,0);
+ellipse(50,90,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("X",30,90);
+}
+popMatrix();
+break;
+   }
+}
+
+void rana_(){
+   switch(t){
+      case 0:
+   pushMatrix();
+    translate(200,450);
+     if(deFrente[23] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,90,80,60);
+fill(0,255,0);
+ellipse(50,85,80,50);
+fill(255);
+ellipse(29,60,30,30);
+ellipse(70,60,30,30);
+fill(0,0,0);
+ellipse(29,60,10,10);
+ellipse(70,60,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("C",30,90);
+}
+popMatrix();
+break;
+ case 1:
+   pushMatrix();
+    translate(400,0);
+     if(deFrente[23] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,90,80,60);
+fill(0,255,0);
+ellipse(50,85,80,50);
+fill(255);
+ellipse(29,60,30,30);
+ellipse(70,60,30,30);
+fill(0,0,0);
+ellipse(29,60,10,10);
+ellipse(70,60,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("C",30,90);
+}
+popMatrix();
+break;
+case 2:
+   pushMatrix();
+    translate(400,0);
+     if(deFrente[23] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,90,80,60);
+fill(0,255,0);
+ellipse(50,85,80,50);
+fill(255);
+ellipse(29,60,30,30);
+ellipse(70,60,30,30);
+fill(0,0,0);
+ellipse(29,60,10,10);
+ellipse(70,60,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("C",30,90);
+}
+popMatrix();
+break;
+case 3:
+   pushMatrix();
+    translate(600,150);
+     if(deFrente[23] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,90,80,60);
+fill(0,255,0);
+ellipse(50,85,80,50);
+fill(255);
+ellipse(29,60,30,30);
+ellipse(70,60,30,30);
+fill(0,0,0);
+ellipse(29,60,10,10);
+ellipse(70,60,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("C",30,90);
+}
+popMatrix();
+break;
+case 4:
+   pushMatrix();
+    translate(600,300);
+     if(deFrente[23] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,90,80,60);
+fill(0,255,0);
+ellipse(50,85,80,50);
+fill(255);
+ellipse(29,60,30,30);
+ellipse(70,60,30,30);
+fill(0,0,0);
+ellipse(29,60,10,10);
+ellipse(70,60,10,10);
+
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("C",30,90);
+}
+popMatrix();
+break;
+   }
+}
+
+void perro_(){
+  switch(t){
+      case 0:
+   pushMatrix();
+    translate(300,450);
+    if(deFrente[24] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(200,0,0);
+ellipse(50,115,10,30);
+fill(240,150,70);
+ellipse(50,90,60,60);
+fill(150,50,50);
+ellipse(25,90,20,50);
+ellipse(73,90,20,50);
+fill(150,50,50);
+ellipse(50,98,20,20);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+
+}else{
+
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+ fill(250,200,100);
+textSize(70);
+text("V",30,90);
+}
+popMatrix();
+break;
+case 1:
+   pushMatrix();
+    translate(200,300);
+    if(deFrente[24] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(200,0,0);
+ellipse(50,115,10,30);
+fill(240,150,70);
+ellipse(50,90,60,60);
+fill(150,50,50);
+ellipse(25,90,20,50);
+ellipse(73,90,20,50);
+fill(150,50,50);
+ellipse(50,98,20,20);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+
+}else{
+
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+ fill(250,200,100);
+textSize(70);
+text("V",30,90);
+}
+popMatrix();
+break;
+case 2:
+   pushMatrix();
+    translate(100,150);
+    if(deFrente[24] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(200,0,0);
+ellipse(50,115,10,30);
+fill(240,150,70);
+ellipse(50,90,60,60);
+fill(150,50,50);
+ellipse(25,90,20,50);
+ellipse(73,90,20,50);
+fill(150,50,50);
+ellipse(50,98,20,20);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+
+}else{
+
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+ fill(250,200,100);
+textSize(70);
+text("V",30,90);
+}
+popMatrix();
+break;
+case 3:
+   pushMatrix();
+    translate(500,300);
+    if(deFrente[24] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(200,0,0);
+ellipse(50,115,10,30);
+fill(240,150,70);
+ellipse(50,90,60,60);
+fill(150,50,50);
+ellipse(25,90,20,50);
+ellipse(73,90,20,50);
+fill(150,50,50);
+ellipse(50,98,20,20);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+
+}else{
+
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+ fill(250,200,100);
+textSize(70);
+text("V",30,90);
+}
+popMatrix();
+break;
+case 4:
+   pushMatrix();
+    translate(500,300);
+    if(deFrente[24] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(200,0,0);
+ellipse(50,115,10,30);
+fill(240,150,70);
+ellipse(50,90,60,60);
+fill(150,50,50);
+ellipse(25,90,20,50);
+ellipse(73,90,20,50);
+fill(150,50,50);
+ellipse(50,98,20,20);
+fill(0,0,0);
+ellipse(63,76,5,5);
+ellipse(35,76,5,5);
+
+}else{
+
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+ fill(250,200,100);
+textSize(70);
+text("V",30,90);
+}
+popMatrix();
+break;
+  }
+}
+
+
+void vaca_(){
+  switch(t){
+      case 0:
+   pushMatrix();
+    translate(400,450);
+     if(deFrente[25] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+ellipse(50,85,60,60);
+fill(0,0,0);
+ellipse(60,90,30,20);
+ellipse(50,60,20,10);
+fill(200,150,50);
+ellipse(50,110,60,40);
+fill(0,0,0);
+ellipse(29,75,10,10);
+ellipse(70,75,10,10);
+fill(250,150,160);
+ellipse(65,110,5,20);
+ellipse(35,110,5,20);
+
+}else{
+  
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("B",30,90);
+}
+popMatrix();
+break;
+ case 1:
+   pushMatrix();
+    translate(400,300);
+     if(deFrente[25] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+ellipse(50,85,60,60);
+fill(0,0,0);
+ellipse(60,90,30,20);
+ellipse(50,60,20,10);
+fill(200,150,50);
+ellipse(50,110,60,40);
+fill(0,0,0);
+ellipse(29,75,10,10);
+ellipse(70,75,10,10);
+fill(250,150,160);
+ellipse(65,110,5,20);
+ellipse(35,110,5,20);
+
+}else{
+  
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("B",30,90);
+}
+popMatrix();
+break;
+case 2:
+   pushMatrix();
+    translate(500,450);
+     if(deFrente[25] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+ellipse(50,85,60,60);
+fill(0,0,0);
+ellipse(60,90,30,20);
+ellipse(50,60,20,10);
+fill(200,150,50);
+ellipse(50,110,60,40);
+fill(0,0,0);
+ellipse(29,75,10,10);
+ellipse(70,75,10,10);
+fill(250,150,160);
+ellipse(65,110,5,20);
+ellipse(35,110,5,20);
+
+}else{
+  
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("B",30,90);
+}
+popMatrix();
+break;
+case 3:
+   pushMatrix();
+    translate(400,150);
+     if(deFrente[25] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+ellipse(50,85,60,60);
+fill(0,0,0);
+ellipse(60,90,30,20);
+ellipse(50,60,20,10);
+fill(200,150,50);
+ellipse(50,110,60,40);
+fill(0,0,0);
+ellipse(29,75,10,10);
+ellipse(70,75,10,10);
+fill(250,150,160);
+ellipse(65,110,5,20);
+ellipse(35,110,5,20);
+
+}else{
+  
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("B",30,90);
+}
+popMatrix();
+break;
+case 4:
+   pushMatrix();
+    translate(300,150);
+     if(deFrente[25] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(255);
+ellipse(29,60,20,10);
+ellipse(70,60,20,10);
+ellipse(50,85,60,60);
+fill(0,0,0);
+ellipse(60,90,30,20);
+ellipse(50,60,20,10);
+fill(200,150,50);
+ellipse(50,110,60,40);
+fill(0,0,0);
+ellipse(29,75,10,10);
+ellipse(70,75,10,10);
+fill(250,150,160);
+ellipse(65,110,5,20);
+ellipse(35,110,5,20);
+
+}else{
+  
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("B",30,90);
+}
+popMatrix();
+break;
+  }
+}
+
+void oruga_(){
+   switch(t){
+      case 0:
+    pushMatrix();
+    translate(500,450);
+     if(deFrente[26] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,85,30,30);
+ellipse(60,98,30,30);
+ellipse(40,70,30,30);
+ellipse(70,105,30,30);
+ellipse(80,105,30,30);
+ellipse(40,45,50,50);
+fill(0,0,0);
+ellipse(30,45,10,10);
+ellipse(55,45,10,10);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("N",30,90);
+}
+popMatrix();
+break;
+case 1:
+    pushMatrix();
+    translate(500,300);
+     if(deFrente[26] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,85,30,30);
+ellipse(60,98,30,30);
+ellipse(40,70,30,30);
+ellipse(70,105,30,30);
+ellipse(80,105,30,30);
+ellipse(40,45,50,50);
+fill(0,0,0);
+ellipse(30,45,10,10);
+ellipse(55,45,10,10);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("N",30,90);
+}
+popMatrix();
+break;
+case 2:
+    pushMatrix();
+    translate(200,450);
+     if(deFrente[26] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,85,30,30);
+ellipse(60,98,30,30);
+ellipse(40,70,30,30);
+ellipse(70,105,30,30);
+ellipse(80,105,30,30);
+ellipse(40,45,50,50);
+fill(0,0,0);
+ellipse(30,45,10,10);
+ellipse(55,45,10,10);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("N",30,90);
+}
+popMatrix();
+break;
+case 3:
+    pushMatrix();
+    translate(300,450);
+     if(deFrente[26] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,85,30,30);
+ellipse(60,98,30,30);
+ellipse(40,70,30,30);
+ellipse(70,105,30,30);
+ellipse(80,105,30,30);
+ellipse(40,45,50,50);
+fill(0,0,0);
+ellipse(30,45,10,10);
+ellipse(55,45,10,10);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("N",30,90);
+}
+popMatrix();
+break;
+case 4:
+    pushMatrix();
+    translate(400,150);
+     if(deFrente[26] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(0,255,0);
+ellipse(50,85,30,30);
+ellipse(60,98,30,30);
+ellipse(40,70,30,30);
+ellipse(70,105,30,30);
+ellipse(80,105,30,30);
+ellipse(40,45,50,50);
+fill(0,0,0);
+ellipse(30,45,10,10);
+ellipse(55,45,10,10);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("N",30,90);
+}
+popMatrix();
+break;
+   }
+}
+
+void mariposa_(){
+ switch(t){
+      case 0:
+   pushMatrix();
+    translate(600,450);
+    if(deFrente[27] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,25,120);
+ellipse(75,65,45,60);
+ellipse(75,95,35,50);
+ellipse(25,65,45,60);
+ellipse(25,95,35,50);
+fill(250,25,120);
+ellipse(50,85,15,70);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("M",30,90);
+}
+popMatrix();
+break;
+ case 1:
+   pushMatrix();
+    translate(200,450);
+    if(deFrente[27] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,25,120);
+ellipse(75,65,45,60);
+ellipse(75,95,35,50);
+ellipse(25,65,45,60);
+ellipse(25,95,35,50);
+fill(250,25,120);
+ellipse(50,85,15,70);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("M",30,90);
+}
+popMatrix();
+break;
+case 2:
+   pushMatrix();
+    translate(400,450);
+    if(deFrente[27] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,25,120);
+ellipse(75,65,45,60);
+ellipse(75,95,35,50);
+ellipse(25,65,45,60);
+ellipse(25,95,35,50);
+fill(250,25,120);
+ellipse(50,85,15,70);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("M",30,90);
+}
+popMatrix();
+break;
+case 3:
+   pushMatrix();
+    translate(400,450);
+    if(deFrente[27] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,25,120);
+ellipse(75,65,45,60);
+ellipse(75,95,35,50);
+ellipse(25,65,45,60);
+ellipse(25,95,35,50);
+fill(250,25,120);
+ellipse(50,85,15,70);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("M",30,90);
+}
+popMatrix();
+break;
+case 4:
+   pushMatrix();
+    translate(400,300);
+    if(deFrente[27] == true){
+stroke(0,0,0);
+fill(255);
+rect(0,0,100,150);
+fill(150,25,120);
+ellipse(75,65,45,60);
+ellipse(75,95,35,50);
+ellipse(25,65,45,60);
+ellipse(25,95,35,50);
+fill(250,25,120);
+ellipse(50,85,15,70);
+}else{
+  stroke(0,0,0);
+fill(200,20,90);
+rect(0,0,100,150);
+
+fill(250,200,100);
+textSize(70);
+text("M",30,90);
+}
+popMatrix();
+break;
+ }
+}
+
+
+
+
+
+
+void keyPressed(){
+ 
+    if(key == '1'){
+     deFrente[0] = true;
+    }
+     if(key == '2'){
+    deFrente[1] = true;
+    }
+      if(key == 'q'){
+    deFrente[2] = true;
+    }
+     if(key == 'w'){
+    deFrente[3] = true;
+    }
+     if(key == 'e'){
+     deFrente[4] = true;
+    }
+     if(key == 'r'){
+     deFrente[5] = true;
+    }
+    if(key == 't'){
+     deFrente[6] = true;
+    }
+    if(key == 'y'){
+    deFrente[7] = true;
+    }
+    if(key == 'u'){
+     deFrente[8] = true;
+    }
+    if(key == 'i'){
+     deFrente[9]= true;
+    }
+    if(key == 'o'){
+     deFrente[10]= true;
+
+    }
+     if(key == 'p'){
+      deFrente[11]= true;
+
+    }
+    if(key == 'a'){
+   deFrente[12]= true;
+    }
+    if(key == 's'){
+   deFrente[13]= true;
+ 
+    }
+   if(key == 'd'){
+   deFrente[14]= true;
+    }
+    if(key == 'f'){
+    deFrente[15]= true;
+    }
+    if(key == 'g'){
+   deFrente[16]= true;
+    }
+    if(key == 'h'){
+    deFrente[17]= true;
+    }
+      if(key == 'j'){
+  deFrente[18]= true;
+    }
+     if(key == 'k'){
+ deFrente[19]= true;
+    }
+    if(key == 'l'){
+   deFrente[20]= true;
+    }
+    if(key == 'z'){
+   deFrente[21]= true;
+    }
+    if(key == 'x'){
+    deFrente[22]= true;
+    }
+    if(key == 'c'){
+    deFrente[23]= true;
+    }
+    if(key == 'v'){
+   deFrente[24]= true;
+    }
+    if(key == 'b'){
+   deFrente[25]= true;
+    }
+    if(key == 'n'){
+    deFrente[26]= true;
+    }
+    if(key == 'm'){
+     deFrente[27]= true;
+    }
+     if(key == '0'){
+     tur=1;
+   }
+   if(key =='9'){
+     tur=0;
+   }
+}
+void turno(){
+fill(0,0,0);
+     textSize(15);
+    text("presiona 0 para cambiar de turno",30,660);
+    fill(0,0,0);
+     textSize(15);
+    text("Presiona 9 para cambiar de turno",520,660);
+}
+}
+
+int tur;
+   int j1=0;
+   int j2=0;
+   boolean[] turno = new boolean[2];
+  
+ class Player{
+     
+   void jugador1(){
+     if(tur == 1){
+     turno[1] = true;
+     }
+     if(turno[1] == true){
+       turno[0] = false;
+     }
+     if(turno[0] == true){
+   fill(0,0,255);
+    textSize(30);
+    text("Tu turno Jugador 1",215,640);
+     }
+   }
+    
+    void jugador2(){
+   if(tur == 0){
+      turno[0]= true;
+   }
+   if(turno[0] == true){
+       turno[1] = false;
+     }
+     if(turno[1]==true){
+       fill(0,0,255);
+    textSize(30);
+    text("Tu turno Jugador 2 ",215,640);
+   }
+    }
+ }
+
+class Texto{
+  
+  void Tcaso1(){
+    fill(240,255,88);
+    textSize(90);
+    text("Circle Land",110,300);
+    textSize(30);
+    text("memorama",260,350);
+    fill(0,0,0);
+     textSize(30);
+    text("Presiona Ctrl para continuar",150,500);
+}
+  void Tcaso2(){
+    fill(225,90,90);
+    textSize(70);
+    text("Reglas del juego",70,140);
+     fill(0,0,0);
+     textSize(23);
+    text("Al inicio de el juego el jugador 1 elige",150,200);
+   text(  "la primera carta y luego otra, Al momento de",100,230);
+  text(  "elegir las cartas, estas se voltean, revelando ",100,260);
+ text( " su diseño individual. Si las cartas coinciden,",100,290);
+ text( "el jugador gana un punto y tiene derecho de",100,320);
+  text( " elegir otras dos cartas. Si las cartas no ",120,350);
+  text(  " coinciden son nuevamente volteadas y pasa el ",100,380);
+ text( " turno al siguiente jugador. Cuando no quedan  ",100,410);
+   text(  " cartas por revelar, el juego termina, y se pasa",100,440);
+   text( "a la pantalla de conclusión.",100,470);
+   text( "las cartas se descubren con el teclado de la",100,500);
+   text( "esquina superior izquierda hacia la derecha",100,530);
+   text( "de las teclas 1,2,q,w... hasta la m sin contar la ñ",100,560);
+   fill(0,0,0);
+     textSize(30);
+    text("Presiona Ctrl para continuar",150,650);
+}
+ void Tcaso3(){
+    fill(0,0,0);
+    textSize(30);
+    text("Jugador 1", 30,640);
+    textSize(30);
+    text("Jugador 2", 530,640);
+    text(j2,560,685);
+     text(j1,30,685);
+    
+}
+ void Tcaso4(){
+ fill(240,255,88);
+    textSize(90);
+    text("GAME OVER",90,300);
+ }
+}
+
+
+void cambio(){
+if( una.deFrente [0] && una.deFrente [2] && una.deFrente [3] && una.deFrente [4] && una.deFrente [5] && una.deFrente [6] && una.deFrente [7] && una.deFrente [8] == true ){
+ if(una.deFrente [9] && una.deFrente [10] && una.deFrente [11] && una.deFrente [12] && una.deFrente [13] && una.deFrente [14] && una.deFrente [15] && una.deFrente [16] && una.deFrente [17] == true ){
+if(una.deFrente [18] && una.deFrente [19] && una.deFrente [20] && una.deFrente [21] && una.deFrente [22] && una.deFrente [23] && una.deFrente [24] && una.deFrente [25] == true){
+if(una.deFrente [26] && una.deFrente [27] == true){
+fill(0,0,0);
+     textSize(30);
+    text("Presiona Ctrl para continuar",150,690);
+}
+}
+ }
+}
+}
+
+   
+  
+    void key(){
+    if (key == '0'){
+     
+      una.deFrente[0] = false;
+      una.deFrente[1]= false;
+      una.deFrente[2]= false;
+      una.deFrente[3]= false;
+      una.deFrente[4]= false;
+      una.deFrente[5]= false;
+      una.deFrente[6]= false;
+      una.deFrente[7]= false;
+      una.deFrente[8]= false;
+      una.deFrente[9]= false;
+      una.deFrente[10]= false;
+      una.deFrente[11] = false;
+      una.deFrente[12]= false;
+      una.deFrente[13]= false;
+      una.deFrente[14]= false;
+      una.deFrente[15]= false;
+      una.deFrente[16]= false;
+      una.deFrente[17]= false;
+      una.deFrente[18]= false;
+      una.deFrente[19]= false;
+      una.deFrente[20]= false;
+      una.deFrente[21]= false;
+      una.deFrente[22]= false;
+      una.deFrente[23]= false;
+      una.deFrente[24]= false;
+      una.deFrente[25]= false;
+      una.deFrente[26]= false;
+      una.deFrente[27]= false;
+    }
+   if (key == '9'){
+     
+      una.deFrente[0] = false;
+      una.deFrente[1]= false;
+      una.deFrente[2]= false;
+      una.deFrente[3]= false;
+      una.deFrente[4]= false;
+      una.deFrente[5]= false;
+      una.deFrente[6]= false;
+      una.deFrente[7]= false;
+      una.deFrente[8]= false;
+      una.deFrente[9]= false;
+      una.deFrente[10]= false;
+      una.deFrente[11] = false;
+      una.deFrente[12]= false;
+      una.deFrente[13]= false;
+      una.deFrente[14]= false;
+      una.deFrente[15]= false;
+      una.deFrente[16]= false;
+      una.deFrente[17]= false;
+      una.deFrente[18]= false;
+      una.deFrente[19]= false;
+      una.deFrente[20]= false;
+      una.deFrente[21]= false;
+      una.deFrente[22]= false;
+      una.deFrente[23]= false;
+      una.deFrente[24]= false;
+      una.deFrente[25]= false;
+      una.deFrente[26]= false;
+      una.deFrente[27]= false;
+    }
+   
+    }
+    
+    void lugar(){
+if( una.deFrente[0] && una.deFrente[14] ==true){
+  if(turno[0] == true){
+    j1 = +1;
+    
+  }
+  if(turno[1] == true){
+    j2 = +1;  
+  }
+   
+    }
+
+if( una.deFrente[1] && una.deFrente[15] ==true){
+ if(turno[0] == true){
+    j1 =+1;
+    
+  }
+  if(turno[1] == true){
+    j2 =+1;  
+  }
+    
+     }
+
+if( una.deFrente[2] && una.deFrente[16] ==true){
+ if(turno[0] == true){
+    j1 =+1;
+    
+  }
+  if(turno[1] == true){
+    j2 =+1;  
+  }
+    
+
+    }
+if( una.deFrente[3] && una.deFrente[17] ==true){
+ if(turno[0] == true){
+    j1 =+1;
+    
+  }
+  if(turno[1] == true){
+    j2 =+1;  
+  }
+    
+
+}
+if( una.deFrente[4] && una.deFrente[18] ==true){
+  if(turno[0] == true){
+    j1 =+1;
+    
+  }
+  if(turno[1] == true){
+    j2 =+1;  
+  }
+    
+
+}
+if( una.deFrente[5] && una.deFrente[19] ==true){
+ if(turno[0] == true){
+    j1 =+1;
+    
+  }
+  if(turno[1] == true){
+    j2 =+1;  
+  }
+    
+
+}
+if( una.deFrente[6] && una.deFrente[20] ==true){
+ if(turno[0] == true){
+    j1 =+1;
+    
+  }
+  if(turno[1] == true){
+    j2 =+1;  
+  }
+    
+}
+    
+if( una.deFrente[7] && una.deFrente[21] ==true){
+ if(turno[0] == true){
+    j1 =+1;
+    
+  }
+  if(turno[1] == true){
+    j2 =+1;  
+  }
+    
+}
+if( una.deFrente[8] && una.deFrente[22] ==true){
+ if(turno[0] == true){
+    j1 =+1;
+    
+  }
+  if(turno[1] == true){
+    j2 =+1;  
+  }
+    
+}
+if( una.deFrente[9] && una.deFrente[23] ==true){
+ if(turno[0] == true){
+    j1 =+1;
+    
+  }
+  if(turno[1] == true){
+    j2 =+1;  
+  }
+    
+}
+if( una.deFrente[10] && una.deFrente[24] ==true){
+ if(turno[0] == true){
+    j1 =+1;
+    
+  }
+  if(turno[1] == true){
+    j2 =+1;  
+  }
+    
+}
+if( una.deFrente[11] && una.deFrente[25] ==true){
+  if(turno[0] == true){
+    j1 =+1;
+    
+  }
+  if(turno[1] == true){
+    j2 =+1;  
+  }
+   
+}
+
+if( una.deFrente[12] && una.deFrente[26] ==true){
+  if(turno[0] == true){
+    j1 =+1;
+    
+  }
+  if(turno[1] == true){
+    j2 =+1;  
+  }
+    
+}
+
+if( una.deFrente[13] && una.deFrente[27] ==true){
+  if(turno[0] == true){
+    j1 =+1;
+    
+  }
+  if(turno[1] == true){
+    j2 =+1;  
+  }
+  
+}
+}
